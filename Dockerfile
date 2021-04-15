@@ -18,8 +18,12 @@ RUN bash -c "source /root/anaconda3/bin/activate;\
              source activate env_python3.6;\
              conda install -c conda-forge pyspark;\
              python3.6 -m pip install -U pip;\
-             python3.6 -m pip install  jupyterlab"
+             python3.6 -m pip install  jupyterlab;"\
 
+
+EXPOSE 8888    
+
+ENTRYPOINT ["jupyter", "notebook", "--no-browser","--ip=0.0.0.0","--NotebookApp.token=''","--NotebookApp.password=''"]
 
 
 
