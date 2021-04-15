@@ -21,7 +21,7 @@ RUN sed -i 's|'$(cat curr_version.tmp)'/main|'$ALPINE_OLD_VERSION'/main|' \
 RUN pip3 install --upgrade pip
 
 # Installing IPython
-RUN pip install ipython eacyocr jupyterlab kubeflow-kale
+RUN pip3 install ipython eacyocr jupyterlab kubeflow-kale
 
 # GENERAL DEPENDENCIES
 
